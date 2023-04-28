@@ -1,2 +1,3 @@
-# Use Solid with DaisyUI and Flowbite
+# Use Solid with DaisyUI
+
 
