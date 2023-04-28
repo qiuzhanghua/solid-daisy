@@ -4,23 +4,31 @@ import {
   DragEventHandler,
   createDraggable,
   createDroppable,
+  transformStyle,
 } from "@thisbeyond/solid-dnd";
-import { Component, createSignal, Show } from "solid-js";
+import { ParentComponent, Component, createSignal, Show } from "solid-js";
 
-const Draggable = () => {
+const Draggable: Component = () => {
   const draggable = createDraggable(1);
+
   return (
-    <div use:draggable class="draggable">
+    <div
+      ref={draggable.ref}
+      class="draggable"
+      style={transformStyle(draggable.transform)}
+      {...draggable.dragActivators}
+    >
       <button class="btn btn-primary">Draggable</button>
     </div>
   );
 };
 
-const Droppable = (props) => {
+const Droppable: ParentComponent = (props) => {
   const droppable = createDroppable(1);
+
   return (
     <div
-      use:droppable
+      ref={droppable.ref}
       class="droppable"
       classList={{ "!droppable-accept": droppable.isActiveDroppable }}
     >

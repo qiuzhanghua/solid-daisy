@@ -7,5 +7,8 @@ export default defineConfig({
 		target: 'esnext',
 		polyfillDynamicImport: false,
 	},
+	optimizeDeps: {
+		extensions: ["jsx"],
+	},
 });
 
