@@ -1,15 +1,15 @@
 /** @type {import('tailwindcss').Config} */
+import daisy from "daisyui";
+
 export default {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
-    "./node_modules/flowbite/**/*.js",
   ],
   theme: {
     extend: {},
   },
   plugins: [
-    require('daisyui'),
-    require('flowbite/plugin'),
+    daisy,
   ],
 }
 
