@@ -3,15 +3,21 @@ module.exports = {
     browser: true,
     es2021: true
   },
-  plugins: ["solid"],
-  extends: ["standard", "plugin:solid/recommended"],
-  parser: "@typescript-eslint/parser",
+  "parser": "@typescript-eslint/parser",
+  extends: ["eslint:recommended", "plugin:solid/typescript"],
+  overrides: [
+  ],
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module"
   },
+  plugins: [
+    "solid"
+  ],
   rules: {
-    quotes: ["warn", "double"],
-    semi: ["warn", "always"]
+    "no-unused-vars": "off",
+    "no-use-before-define": "warn",
+    "semi": ["warn", "always"],
+    "quotes": ["warn", "double"]
   }
-};
+}

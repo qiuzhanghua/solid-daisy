@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.droppable {
+    @apply flex flex-col flex-1;
+    @apply gap-5 justify-center items-center;
+    @apply p-6 w-3/4 h-1/2 leading-6 min-h-full;
+    @apply text-center text-gray-800 bg-white rounded-lg border border-gray-200 border-solid;
+}
